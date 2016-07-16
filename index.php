@@ -33,6 +33,8 @@
                 <h2>动手编写一个编译器</h2>
             </div>
             <div class="doc_list_context">
+                <a href="javascript:void(0);" class="show_pop">show pop</a>
+                <a href="javascript:void(0);" class="close_pop">close pop</a>
                 <p>
                     动手编写一个编译器，学习一下较为底层的编程方式，是一种学习计算机到底是如何工作的非常有效方法。
 
