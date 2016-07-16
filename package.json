@@ -31,8 +31,8 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "dev": "export BUILD_DEV=1;export BUILD_PRERELEASE=1; webpack --b --progress -w --config ./webpack/config.dev.js",
-    "product": "export BUILD_DEV=0;export BUILD_PRERELEASE=0; webpack --b --progress --config ./webpack/config.product.js"
+    "dev": "export BUILD_DEV=1;export BUILD_PRERELEASE=1; webpack --b --progress -w --config ./config.dev.js",
+    "product": "export BUILD_DEV=0;export BUILD_PRERELEASE=0; webpack --b --progress --config ./config.product.js"
   },
   "author": "",
   "license": "ISC"

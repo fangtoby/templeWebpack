@@ -19,7 +19,7 @@ module.exports = {
 		 'js/detail/index':'./src/js/detail/index.js'
     },
 	output: {
-		path: path.join(__dirname, 'assets'),
+		path: path.join(__dirname, './assets'),
 		/*
 		如何缓存
 
