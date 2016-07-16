@@ -42,7 +42,6 @@ module.exports = {
 		从上面的截图可以看出来，通过WebPack是可以很轻松做到第二点的——只需要给文件名配置上[chunkhash:8]即可，其中8是指hash长度为8，默认是16。
 		*/
 		filename: '[name].js',//'[name].[chunkhash:16].js',
-		chunkFilename: '[name].js',//'[name].[chunkhash:8].js',
 		/*
 		P.S.这样的处理效果已经很好了，但同样有劣处，即浏览器给这种缓存方式的缓存容量太少了，只有12Mb，
 
@@ -56,7 +55,8 @@ module.exports = {
 		//});
 		//Webpack 会完成其余的工作, 生成额外的 chunk 文件帮你加载好.
 		//Webpack 在 HTML script 标签中加载他们时会假设这些文件是怎你的根路径下. 你可以用 output.publicPath 来配置.
-		publicPath: "./assets/" // 引用你的文件时考虑使用的地址
+		chunkFilename: "/js/ensure/[name].[chunkhash].js",
+		publicPath: "./assets" // 引用你的文件时考虑使用的地址
 	},
 	plugins: [
 		// definePlugin 接收字符串插入到代码当中, 所以你需要的话可以写上 JS 的字符串
