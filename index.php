@@ -54,5 +54,7 @@
             </p>
         </div>
     </footer>
+    <script type="text/javascript" src="/assets/js/lib/common.js"></script>
+    <script type="text/javascript" src="/assets/js/index/index.js"></script>
 </body>
 </html>
