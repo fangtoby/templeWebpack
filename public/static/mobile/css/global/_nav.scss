@@ -1,0 +1,26 @@
+﻿@charset "UTF-8";
+#nav {
+  position:fixed;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:10;
+  padding-top:10px;
+  background:#fcfdfd;
+  border-top:solid 1px $color-border;
+  .it {
+    float:left;
+    width:25%;
+    span {
+      display:block;
+      line-height:37px;
+      text-align:center;
+      font-size:16px;
+      color:$color-sub
+    }
+    .icon {
+      display:block;
+      margin:0 auto
+    }
+  }
+}

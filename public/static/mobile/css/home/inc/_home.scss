@@ -1,0 +1,33 @@
+body {
+  background:$color-bg
+}
+#main {
+  visibility:hidden
+}
+.xct-course {
+  margin-top:15px;
+  background:#fff;
+  box-shadow:0 3px 5px -2px #ddd;
+  .course-title {
+    padding:0 10px;
+    line-height:35px;
+    .fl {
+      font-size:15px;
+      color:$color-txt-theme;
+      .icon {
+        margin-right:7px
+      }
+    }
+    .fr {
+      font-size:13px;
+      color:$color-tips;
+      .icon {
+        margin-left:4px
+      }
+    }
+    .icon {
+      position:relative;
+      top:2px
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.manage-banner{
+  background: url('/static/mobile/images/member/message_bg.png') center center no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 90px;
+  padding-top: 75px;
+  padding-left: 20px;
+  .manage-origin{
+    height: 60px;
+    span{
+      display: block;
+      height: 64px;
+      line-height: 64px;
+      img{
+        height: 60px;
+        width: 60px;
+        border: solid 2px #fff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+      b{
+        display: inline-block;
+        font-size: 20px;
+        color: #ffffff;
+        vertical-align: top;
+      }
+    }
+  }
+}
+.manage-title{
+  background-color: #fdfdfd;
+  padding: 10px;
+  border-bottom: solid 1px #ddd;
+  span{
+    color: #30789a;
+    font-size: 15px;
+    padding-left: 30px;
+    background: url('/static/mobile/images/icon/icon_n.png') left center no-repeat;
+    -webkit-background-size: 27%;
+    background-size: 27%;
+  }
+}
+.msg-list{
+  .msg-list-item{
+    position: relative;
+    border-bottom: solid 1px #ddd;
+    padding: 10px;
+    display: block;
+    background-color: #fff;
+    .msg-list-header{
+      font-size: 14px;
+      color: #333333;
+      b{
+        color: #888888;
+        font-size: 12px;
+        font-weight: normal;
+        padding-left: 10px;
+      }
+    }
+    .msg-list-context{
+      padding: 10px 0px;
+      p{
+        color: #888888;
+        font-size: 13px;
+      }
+    }
+    .msg-list-decoration{
+      position: absolute;
+      height: 10px;
+      width: 15px;
+      right: 10px;
+      top: 10px;
+      -webkit-background-size: 27%;
+      background-size: 27%;
+      background: url('/static/mobile/images/member/message_dec.png') center center no-repeat;
+    }
+  }
+}
+.my-msg-empty{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 350px;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background: url('/static/mobile/images/member/my_msg_empty.png') top center no-repeat;
+  text-align: center;
+  span{
+    display: block;
+    font-size: 16px;
+    color: #888888;
+    margin-top: 10px;
+  }
+  .but{
+    display: block;
+    padding: 15px;
+    background-color: #30789a;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}

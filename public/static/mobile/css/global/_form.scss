@@ -1,0 +1,96 @@
+﻿@charset "UTF-8";
+$input-h: 30px;
+.xct-container {
+  height:100%;
+  background:url('../../images/auth/bg.jpg') center 0 no-repeat;
+  background-size:150%;
+}
+.page-title {
+  line-height:55px;
+  font-size:18px;
+  text-align:center;
+  color:$color-sub;
+  .icon-back {
+    float:left;
+    position:relative;
+    top:20px;
+    left:10px
+  }
+}
+#form {
+  .it {
+    position:relative;
+    padding:15px 0;
+    margin-bottom:1px;
+    background-color:#fff;
+    .title {
+      float:left;
+      width:19%;
+      .icon {
+        margin-top:4px
+      }
+    }
+    .input {
+      float:left;
+      width:67%;
+      input {
+        width:100%;
+        height:$input-h;
+        line-height:$input-h;
+        font-size:16px;
+        border:none;
+        outline:none
+      }
+    }
+    .attach {
+      float:left;
+      width:14%;
+      height:$input-h;
+      .icon {
+        margin-top:6px
+      }
+    }
+    .icon {
+      display:block;
+      margin:0 auto
+    }
+  }
+  .it.captcha {
+    .input {
+      width:36%
+    }
+    .captcha-pic {
+      float:left;
+      width:31%;
+      text-align:center;
+      img {
+        display:block;
+        margin-top:-8px
+      }
+    }
+  }
+  .it.code {
+    .input {
+      width:45%
+    }
+    .attach {
+      width:36%
+    }
+    #code {
+      display:block;
+      width:90px;
+      height:30px;
+      line-height:30px;
+      text-align:center;
+      color:#fff;
+      background:#5690ae;
+      border-radius:$radius;
+      &.disabled {
+        background:#d1d5da
+      }
+    }
+  }
+}
+.btn-b {
+  padding-top:30px
+}

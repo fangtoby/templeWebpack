@@ -1,0 +1,12 @@
+/**
+ * .config.js 模板
+ *
+ * 1. 复制 .config.js.example 并命名为 .config.js
+ * 2. 修改proxy为自己本地域名地址
+ *
+ * @author: dot.f
+ * @updated: 2016.07.14
+ */
+module.exports = {
+    proxy: 'www.xct.dev'//示例
+}

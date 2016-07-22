@@ -1,0 +1,1 @@
+webpackJsonp([5],[function(n,t){document.body.addEventListener("touchstart",function(){})}]);

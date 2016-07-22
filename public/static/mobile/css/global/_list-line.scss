@@ -1,0 +1,53 @@
+﻿@charset "UTF-8";
+.xct-list {
+  padding:60px 10px 0 10px;
+  .it {
+    position:relative;
+    padding-left:130px;
+    margin-bottom:10px;
+    background:#fff;
+    box-shadow:0 3px 5px 0 #ddd
+  }
+  .pic {
+    width:130px;
+    height:90px;
+    margin-left:-130px;
+    overflow:hidden;
+    img {
+      display:block;
+      width:100%;
+      max-width:none
+    }
+  }
+  .info {
+    width:100%;
+    p {
+      padding:0 10px
+    }
+    p.title {
+      line-height:16px;
+      padding-top:13px;
+      font-size:16px;
+      color:$color-title;
+      @include ellipsis()
+    }
+    p.teacher {
+      line-height:13px;
+      padding-top:13px;
+      font-size:13px;
+      color:$color-sub
+    }
+    p.creatime {
+      line-height:21px;
+      padding-top:4px;
+      font-size:12px;
+      color:$color-tips
+    }
+    span {
+      margin-right:10px
+    }
+    .icon-teacher {
+      margin-right:8px
+    }
+  }
+}

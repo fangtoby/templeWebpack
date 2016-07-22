@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.pop-layer {
+  width:100%;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:100%;
+  z-index:100;
+  background:#fff;
+  @include transition(.3s, all, ease-in-out);
+  #layer-scroll {
+    width:100%;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0
+  }
+  &.active {
+    left:0;
+  }
+}
+.pop-alert {
+  position:absolute;
+  left:50%;
+  bottom:-100%;
+  max-width:60%;
+  padding:16px 17px;
+  font-size:15px;
+  text-align:center;
+  color:#fefefe;
+  background:rgba(0,0,0,.7);
+  border-radius:6px;
+  z-index:200;
+  @include transition(all, .1s, ease-in-out)
+}
+.pop-comfirm {
+  position:absolute;
+  top:100%;
+  right:0;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,.7);
+  z-index:100;
+  opacity:0;
+  @include transition(all, .2s, ease-in-out);
+  &.active {
+    top:0;
+    opacity:1
+  }
+}
+.comfirm-main {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:240px;
+  margin-left:-120px;
+  background:$color-f;
+  border-radius:$radius;
+  font-size:15px;
+  color:$color-title;
+  .comfirm-bottom {
+    border-bottom-left-radius:$radius;
+    border-bottom-right-radius:$radius;
+    overflow:hidden
+  }
+  .comfirm-btn {
+    float:left;
+    width:50%;
+    line-height:40px;
+    text-align:center
+  }
+  .comfirm-cancel {
+    color:$color-f;
+    background:$color-theme;
+    border-top:solid 1px transparent
+  }
+  .comfirm-comfirm {
+    color:$color-title;
+    border-top:solid 1px $color-border
+  }
+  .comfirm-txt {
+    line-height:21px;
+    padding:30px;
+    text-align:center
+  }
+  .comfirm-close {
+    position:absolute;
+    top:-15px;
+    right:-15px;
+    width:30px;
+    height:30px;
+    background:$color-theme;
+    border-radius:$radius-round;
+    box-shadow:1px 0px 2px 2px rgba(0,0,0,.1);
+    span {
+      display:block;
+      width:16px;
+      height:2px;
+      margin:0 auto;
+      background:$color-f;
+    }
+    span:first-child {
+      margin-top:13px;
+     -webkit-transform:rotate(-45deg);
+      transform:rotate(-45deg)
+    }
+    span:last-child {
+      margin-top:-2px;
+      -webkit-transform:rotate(45deg);
+      transform:rotate(45deg)
+    }
+  }
+}
