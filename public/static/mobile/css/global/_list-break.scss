@@ -1,0 +1,38 @@
+﻿@charset "UTF-8";
+.break-list {
+  padding:0 5px;
+  li.it {
+    float:left;
+    width:50%;
+  }
+  .list-box {
+    margin:0 5px;
+  }
+  .pic-image {
+    height:90px;
+    overflow:hidden;
+    text-align:center;
+    img {
+      min-height:100%
+    }
+  }
+  .title, .subtitle {
+    line-height:20px;
+  }
+  .title {
+    padding-top:4px;
+    font-size:14px;
+    color:$color-title;
+    @include ellipsis()
+  }
+  .subtitle {
+    padding-bottom:10px;
+    font-size:13px;
+    color:$color-sub
+  }
+}
+@media screen and (min-width: 600px) {
+    .pic-image {
+      height:180px!important
+    }
+}

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+body {
+  background:$color-bg;
+}
+.xct-container {
+  position:relative;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:9
+}
+#class {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:10;
+  width:100%;
+  background:#fff;
+  box-shadow:0 3px 5px -2px #ddd;
+  .it {
+    float:left;
+    width:50%;
+    a {
+      display:block;
+      padding:13px 0;
+      color:$color-sub;
+      text-align:center
+    }
+    span {
+      display:block;
+      line-height:23px;
+      margin-left:-1px;
+      border-left:solid 1px $color-border
+    }
+    i {
+      font-size:17px
+    }
+    .icon-z {
+      margin-left:5px;
+      margin-bottom:2px
+    }
+    &.active {
+      a {
+        color:$color-txt-theme 
+      }
+      .icon-z {
+        background-image:url('../../images/icon/icon_z_active.png')
+      }
+    }
+  }
+}
+#category, #school {
+  display:none;
+  position:fixed;
+  top:50px;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:20;
+  background:rgba(0,0,0,.5);
+  .first {
+    max-height:50%;
+    background:#fff;
+    overflow:auto
+  }
+  .it {
+    padding:0 10px;
+    line-height:50px;
+    border-bottom:solid 1px $color-border;
+    a {
+      display:block;
+      font-size:16px;
+      color:$color-title
+    }
+  }
+  .it.active {
+    border-color:$color-txt-theme;
+    a {
+      color:$color-txt-theme
+    }
+  }
+}
+#school {
+  .it.active {
+    background:#f2f2f2;
+    border-color:$color-border
+  }
+  .first, .second {
+    float:left;
+    width:100%
+  }
+  .second {
+    right:0;
+    background:#f2f2f2;
+    li {
+      line-height:40px;
+      border-bottom:solid 1px $color-border
+    }
+    a {
+      display:block;
+      color:$color-title;
+      text-indent:20px
+    }
+    li.active {
+      a {
+        color:$color-txt-theme
+      }
+    }
+  }
+}
+.dataholder {
+  visibility: hidden;
+  position:absolute
+}
+#more {
+  text-align:center;
+  line-height:50px;
+  color:$color-sub;
+  a {
+    display:block;
+    color:$color-sub
+  }
+  #loading {
+    position:static;
+    margin:0
+  }
+}

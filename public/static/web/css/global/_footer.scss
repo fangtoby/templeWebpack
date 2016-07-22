@@ -1,0 +1,85 @@
+﻿@charset "UTF-8";
+.xct-footer {
+  visibility:hidden;
+  // position:fixed;
+  bottom:0;
+  width:100%;
+  border-top:solid 1px $color-border;
+  background:#fff;
+  z-index:10;
+  p {
+    text-align:center;
+  }
+  .about-us {
+    line-height:50px;
+    font-size:14px;
+    color:#324f68;
+    a {
+      color:#324f68
+    }
+    a:hover {
+      color:#4b89dc
+    }
+    span {
+      padding:0 4px 0 8px;
+    }
+  }
+  .brand {
+    .icon {
+      display:inline-block;
+      width:110px;
+      height:38px;
+      margin:0 4px 0 3px;
+      border:solid 1px $color-border;
+      background:url('../../images/common/brand.png') no-repeat
+    }
+    .icon:hover {
+      border-color:#4b89dc
+    }
+    .brand-youke {
+      background-position:1px -6px
+    }
+    .brand-daxue {
+      background-position:3px -59px
+    }
+    .brand-xueyuan {
+      background-position:2px -112px
+    }
+    .brand-boya {
+      background-position:-1px -160px
+    }
+    .brand-zz {
+      background-position:-1px -213px
+    }
+  }
+  .copyright {
+    line-height:47px;
+    white-space:nowrap;
+    span {
+      padding:0 11px
+    }
+  }
+  .jubao {
+    padding-bottom:30px;
+    .icon {
+      display:inline-block;
+      margin:0 15px;
+      background:url('../../images/common/jubao.png') no-repeat
+    }
+    .jubao1 {
+      width:134px;
+      height:36px;
+      background-position:0 0
+    }
+    .jubao2 {
+      width:152px;
+      height:36px;
+      background-position:0 -36px
+    }
+    .jubao3 {
+      width:223px;
+      height:30px;
+      background-position:0 -72px
+    }
+  }
+}

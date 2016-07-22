@@ -1,0 +1,64 @@
+.xct-form {
+  padding-top:20px
+}
+.deal {
+  position:relative;
+  padding-top:15px;
+  padding-left:20px;
+  line-height:21px;
+  .checkbox {
+    position:absolute;
+    top:0;
+    opacity:0
+  }
+  .icon {
+    position:relative;
+    top:2px
+  }
+}
+#deal {
+  display:none;
+  position:absolute;
+  width:100%;
+  top:0;
+  right:0;
+  bottom:0;
+  left:100%;
+  background:#fff;
+  overflow:initial;
+  @include transition(left, .3s, ease-in-out);
+  .page-title {
+    border-bottom:solid 1px $color-border;
+    box-shadow:0 0 1px 0 $color-border;
+    color:$color-title;
+    background:#fff
+  }
+  .deal-main {
+    padding:0 12px;
+    .title {
+      line-height:50px;
+      color:$color-title;
+      font-weight:bold
+    }
+    p {
+      line-height:23px;
+      color:$color-sub
+    }
+    .subtitle {
+      padding-top:10px;
+      padding-bottom:5px;
+      color:$color-title;
+      font-weight:bold
+    }
+    .tips {
+      line-height:50px;
+      text-align:right
+    }
+    .attach {
+      padding-left:10px
+    }
+  }
+  &.active {
+    left:0
+  }
+}

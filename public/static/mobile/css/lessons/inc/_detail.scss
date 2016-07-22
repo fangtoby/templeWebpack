@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.video_frame{
+  min-height: 150px;
+}
+
+.lessons-info{
+  .info-header{
+    background-color: #fff;
+    padding: 10px;
+    .header-title{
+      line-height: 22px;
+      span{
+        font-size: 15px;
+        color: #222222;
+        font-weight:bold
+      }
+      b{
+        font-size: 11px;
+        color: #689701;
+        display: inline-block;
+        padding: 1px 10px;
+        border: solid 1px #689701;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        border-radius:5px;
+      }
+    }
+    .header-bottom{
+      padding-top: 5px;
+      .school-name{
+        float: left;
+        span{
+          font-size: 14px;
+          color: #666666;
+          line-height: 18px;
+          .school-logo{
+            padding-right: 5px;
+            vertical-align: middle;
+            img{
+              height: 14px;
+              width: 14px;
+            }
+          }
+        }
+      }
+      .lessons-createtime{
+        float: right;
+        span{
+          font-size: 10px;
+          color: #888888;
+        }
+      }
+    }
+  }
+  .info-tab{
+      border-bottom: solid 1px #ddd;
+      border-top: solid 1px #ddd;
+      ul{
+        background-color: #f8f9fb;
+        li.tab-item{
+          float: left;
+          display: inline-block;
+          width: 50%;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+          border-bottom: solid 2px #f8f9fb;
+          a{
+            font-size: 14px;
+            color: #666666;
+          }
+        }
+        li.active{
+          border-bottom-color: #30789a;
+          a{
+            color: #30789a;
+          }
+        }
+      }
+  }
+  .lessons-detail{
+    padding: 20px 10px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    box-shadow:0 0 6px 0 rgba(15,7,9,.2);
+    ul{
+      border-left: solid 1px #c4d5f0;
+      li{
+        padding-left: 15px;
+        display: block;
+        margin-left: -3px;
+        overflow: visible;
+        background: url('/static/mobile/images/icon/blue_point.png') left top no-repeat;
+        span{
+          padding-bottom: 10px;
+          display: block;
+          color: #666666;
+          font-size: 14px;
+          b{
+            color: #333333;
+            font-size: 14px;
+            font-weight:normal
+          }
+        }
+      }
+    }
+  }
+  .lessons-list{
+    background-color: #fff;
+    ul{
+      li{
+        .lessons-item-title{
+          display: block;
+          background-color: #ebeff4;
+          font-size: 14px;
+          color: #333333;
+          line-height: 32px;
+          border-bottom: solid 1px #ddd;
+          padding-left: 10px;
+        }
+        ol{
+          background-color: #fff;
+          border-bottom: solid 1px #ddd;
+          padding: 10px;
+          li{
+            a{
+              display: block;
+              font-size: 14px;
+              color: #333333;
+              line-height: 32px;
+              &:active,&.active{
+                background: url('/static/mobile/images/icon/lesson_play.png') right center no-repeat;
+                span{
+                  color: #30789a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.comment-list {
+  box-shadow:0 0 6px 0 rgba(15,7,9,.2);
+  .empty {
+    position:static;
+    margin:0;
+    padding-bottom:20px
+  }
+}
+#comment {
+  background:#fff
+}

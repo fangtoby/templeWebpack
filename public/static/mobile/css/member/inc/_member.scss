@@ -1,0 +1,136 @@
+@charset "UTF-8";
+body {
+  background:$color-bg;
+}
+.set_icon{
+  background-image:  url('/static/mobile/images/member/menber_icon.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 28%;
+  background-size: 28%;
+}
+.set_header{
+  background: url('/static/mobile/images/member/member_bg.png') center center no-repeat;;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 150px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  .user_icon{
+    height: 56px;
+    width: 56px;
+    -webkit-border-radius: 56px;
+    -moz-border-radius: 56px;
+    border-radius: 56px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: solid 3px #80a1b4;
+    img{
+      height: 56px;
+      width: 56px;
+    }
+  }
+  .user_name{
+    padding-top: 10px;
+    span{
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+  .user_location{
+    padding-top: 10px;
+    span{
+      font-size: 16px;
+      color: #fff;
+      background-position: -7px -79px;
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+      -webkit-background-size: 41%;
+      background-size: 23%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 22px;
+      height: 22px;
+      i{
+        height: 22px;
+        width: 22px;
+        background-position: -9px -57px;
+        display: inline-block;
+        -webkit-background-size: 169%;
+        background-size: 169%;
+        vertical-align: bottom;
+      }
+      b{
+        font-size: 16px;
+        color: #fff;
+        font-weight: normal;
+        vertical-align: baseline;
+      }
+    }
+  }
+  .user_set_but{
+    position: absolute;
+    height: 25px;
+    width: 13px;
+    right: 10px;
+    top: 50%;
+    margin-top: -13px;
+    background-position: -34px -603px;
+    -webkit-background-size: unset;
+    background-size: unset;
+  }
+}
+.set_from{
+  background-color: #fff;
+  .set_f_item{
+    border-bottom: solid 1px #ddd;
+    padding: 14px 10px;
+    line-height: 22px;
+    display: block;
+    overflow: hidden;
+    .left_title{
+      float: left;
+      font-size: 16px;
+      color: #252525;
+      padding-left:  30px;
+      height: 22px;
+      width: 94px;
+      line-height: 22px;
+    }
+    .right_but{
+      float: right;
+      color: #666;
+      font-size: 14px;
+      padding-right: 20px;
+      background: url('/static/mobile/images/member/set_right_bg.png') right center no-repeat;
+      width: 140px;
+      text-align: right;
+      height: 22px;
+      line-height: 22px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      span,a{
+        color: #666;
+      }
+    }
+    .my_message{
+      background-position: -7px -95px;
+    }
+    .mssage_manage{
+      background-position: -7px -143px;
+    }
+    .my_setting{
+      background-position: -7px -192px;
+    }
+    .service_number{
+      background-position: -7px -242px;
+    }
+    &:active{
+      background-color: #eee;
+    }
+  }
+}

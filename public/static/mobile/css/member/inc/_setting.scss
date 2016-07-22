@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+.mysetting{
+  margin-top: 10px;
+  border-top: solid 1px #ddd;
+  .set_f_item{
+    .left_title{
+      padding-left: 0px;
+    }
+    .user-avatar{
+      height: 22px;
+      width: 22px;
+      -webkit-border-radius: 22px;
+      -moz-border-radius: 22px;
+      border-radius: 22px;
+      overflow: hidden;
+      display: block;
+      float: right;
+      img{
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+}
+.set-loginout{
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #e80000;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  background-color: #fff;
+  display: block;
+}
+#reset-container{
+  padding-top: 10px;
+  width: 100%;
+  top: 0;
+  background: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  z-index: 100;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  .error_message{
+    display: none;
+    color: #C00;
+    padding: 10px;
+  }
+  &.active{
+    left: 0;
+  }
+  .reset_item,.street_item {
+    background-color: #fff;
+    border-top: solid 1px #ddd;
+    padding: 14px 10px;
+    input{
+      border: none;
+      outline: none;
+    }
+    .left_street_name{
+      float: left;
+      line-height: 22px;
+      font-size: 15px;
+    }
+    .right_but{
+      float: right;
+      height: 22px;
+      width: 22px;
+      display: none;
+      background: url('/static/mobile/images/member/street_check.png') center center no-repeat;;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    &.active{
+      .right_but {
+        display: block;
+      }
+    }
+    &:active{
+      background-color: #ddd;
+    }
+  }
+  .street-default{
+    min-height: 200px;
+  }
+  .street_container{
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .street_loading{
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    padding: 20px;
+  }
+  .street_item_noborder{
+    border-bottom: none;
+  }
+  .btn-b{
+    padding-top: 30px;
+    .reset_cancel{
+      background-color: #888;
+    }
+    .reset_hidden{
+      background-color: #cc4400;
+    }
+  }
+  .success{
+    text-align: center;
+    color: #00b3ee;
+    display: none;
+    padding: 10px;
+  }
+  .password_container{
+    border-top: solid 1px #ddd;
+    .password_item{
+      border-bottom: solid 1px #ddd;
+      padding: 14px;
+      background-color: #fff;
+      input{
+        border: none;
+        outline: none;
+        font-size: 15px;
+      }
+    }
+  }
+  .set_change_border{
+    border-bottom: solid 1px #ddd;
+    font-size: 15px;
+  }
+}
