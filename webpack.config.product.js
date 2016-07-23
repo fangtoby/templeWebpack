@@ -22,6 +22,8 @@ module.exports = {
     output:{
         path: path.join(__dirname, 'public'),
         filename: '[name]?v=[chunkhash]',
+        //publicPath 我们也用, 在 path 属性之前的, 比如调试或者 CDN 之类的域名
+        publicPath: '/assets/images/',
         //按需加载 require.ensure([], function() { });文件路径配置
         chunkFilename: "/assets/mobile/js/ensure/[name].js?v=[chunkhash]"
     },
@@ -89,9 +91,9 @@ module.exports = {
             loader: 'ejs'
         },{
             //test: /\.(png|jpg)$/,
-            test: /\.(png|jpg)$/,
+            test: /\.(png|jpg|gif|jpeg)$/,
             // inline base64 URLs for <=8k images, direct URLs for the rest
-            loader: 'url-loader?limit=8192'
+            loader: 'url-loader?limit=8192&name=[name].[ext]?v=[chunkhash]'
         }]
     }
 }
