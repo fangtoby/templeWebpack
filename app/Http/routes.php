@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/index', function () {
+    return view('index.index');
+});
+
+
+Route::get('/index/index', function () {
+    return view('index.index');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
