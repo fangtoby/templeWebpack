@@ -1,5 +1,5 @@
 define(function(require){
-	var xct = require('xct');
+	var xct = require('../xct');
 	xct.Getdata(xct.url.universitylist, {}, function(data){
 		var data = data.data.list.data,
 			len = data.length,

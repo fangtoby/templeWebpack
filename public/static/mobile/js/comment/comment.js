@@ -1,5 +1,5 @@
 define(function(require){
-	var xct = require('xct');
+	var xct = require('../xct');
 	xct.comment = {
 		$container: $('#container'),
 		$comment_container: $('#commentlist'),

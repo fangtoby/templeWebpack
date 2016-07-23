@@ -3,13 +3,15 @@
  * slide(containerId)
  * updata 2015-09-12
  */
+ define(function(require){
+
 (function(global,slide){
 	global.slide = slide().init;
 	global.define && define(function(require,exports,module){
-		require('toucher');
+		require('../toucher/toucher');
 		return global.slide;
 	});
-})(this,function(){
+})(window,function(){
 		var slide = slide || {};
 		slide = {
 			g_param: {
@@ -172,3 +174,5 @@
 		return slide;
 	}
 );
+
+});
