@@ -1,6 +1,6 @@
 define(function(require){
-	var xct = require('xct');
-	var slide = require('slide');
+	var xct = require('../xct');
+	var slide = require('../lib/slide/slide');
 	xct.banner = function(data){
 		var html = '';
 		for(var i=0; i<data.length; i++){

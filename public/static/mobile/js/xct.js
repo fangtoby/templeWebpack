@@ -267,7 +267,7 @@ define(function(require, exports, module){
             }
 		}
 	}
-	xct.url = require('url');
+	xct.url = require('./config/url');
 	module.exports = xct;
   	module.exports.url = xct.url;
 });

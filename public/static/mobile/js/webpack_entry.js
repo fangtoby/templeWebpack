@@ -41,10 +41,15 @@
 // }
 //
 module.exports  = {
+    '/assets/mobile/js/comment/comment.js' : './public/static/mobile/js/comment/comment.js',
+    '/assets/mobile/js/form/form.js' : './public/static/mobile/js/form/form.js',
+    '/assets/mobile/js/home/home.js' : './public/static/mobile/js/home/home.js',
     '/assets/mobile/js/lessons/detail.js' : './public/static/mobile/js/lessons/detail.js',
+    '/assets/mobile/js/lessons/lessons.js' : './public/static/mobile/js/lessons/lessons.js',
     '/assets/mobile/js/member/index.js' : './public/static/mobile/js/member/index.js',
     '/assets/mobile/js/member/mymsg.js' : './public/static/mobile/js/member/mymsg.js',
     '/assets/mobile/js/member/msgmanage.js' : './public/static/mobile/js/member/msgmanage.js',
-    '/assets/mobile/js/member/setting.js' : './public/static/mobile/js/member/setting.js'
+    '/assets/mobile/js/member/setting.js' : './public/static/mobile/js/member/setting.js',
+    '/assets/mobile/js/university/university.js' : './public/static/mobile/js/university/university.js'
 };
 // module.exports = entries('./public/static/mobile/js/*/*.js');
