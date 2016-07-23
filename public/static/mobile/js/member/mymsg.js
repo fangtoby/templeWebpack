@@ -3,7 +3,6 @@
  * 
  */
 
-var $ = require('jquery');
 var page = 1;
 var $content = $('.mymsg');
 var $empty = $('.my-msg-empty');

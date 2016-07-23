@@ -2,7 +2,6 @@
  * Created by 10000461 on 2016/7/13.
  */
 
-var $ = require('jquery');
 var page = 1;
 var $content = $('.msg-list');
 var $empty = $('.msg-manage-empty');
