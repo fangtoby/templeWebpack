@@ -40,6 +40,11 @@
 //     var entryFiles = glob.sync(jsDir + '/*.{js,jsx}');
 // }
 //
+var dir = {
+    assert: '/assets/mobile/js/',
+    src: './public/static/mobile/js/'
+};
+
 module.exports  = {
     '/assets/mobile/js/comment/comment.js' : './public/static/mobile/js/comment/comment.js',
     '/assets/mobile/js/form/form.js' : './public/static/mobile/js/form/form.js',
@@ -53,3 +58,16 @@ module.exports  = {
     '/assets/mobile/js/university/university.js' : './public/static/mobile/js/university/university.js'
 };
 // module.exports = entries('./public/static/mobile/js/*/*.js');
+
+
+
+
+
+
+
+
+
+
+
+
+

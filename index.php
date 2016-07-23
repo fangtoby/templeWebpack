@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dot.F Web HomePage</title>
-    <link rel="stylesheet" type="text/css" href="./src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/public/static/web/css/main.css">
 </head>
 <body>
     <header>
@@ -56,7 +56,5 @@
             </p>
         </div>
     </footer>
-    <script type="text/javascript" src="/assets/js/lib/common.js"></script>
-    <script type="text/javascript" src="/assets/js/index/index.js"></script>
 </body>
 </html>
