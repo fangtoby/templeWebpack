@@ -2,7 +2,7 @@
  * @author gaohuan@yiban.cn
  */
 define(function(require, exports, module){
-	require('jquery');
+	// require('jquery');
 	var xct = {
 		$D: {
 			$doc: $(document),
