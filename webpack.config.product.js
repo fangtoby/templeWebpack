@@ -12,6 +12,12 @@ var webpack = require('webpack');
 var entryTree = require('./public/static/mobile/js/webpack_entry');
 var AssetsPlugin = require('assets-webpack-plugin');
 
+//environment args
+var e = {
+    __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
+    __PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
+}
+
 module.exports = {
     /**
      * webpack 的entry入口，根据配置
@@ -30,9 +36,9 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             //在开发环境中使用 __DEV__ 来输出判断调试信息
-            __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
+            __DEV__: e.__DEV__,
             //隐藏后期版本功能
-            __PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
+            __PRERELEASE__: e.__PRERELEASE__
         }),
         /**
          * javascript 文件压缩
