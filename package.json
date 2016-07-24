@@ -1,9 +1,13 @@
 {
   "scripts": {
     "watch": "gulp watch",
-    "dev": "set BUILD_DEV=1 && set BUILD_PRERELEASE=1 &&  gulp watch",
-    "pro": "set BUILD_DEV=0 && set BUILD_PRERELEASE=0 &&  gulp watch",
-    "product": "set BUILD_DEV=0 && set BUILD_PRERELEASE=0 && webpack --b --progress --config ./webpack.config.product.js --display-modules --display-reasons --display-error-details --colors"
+    "dev-windows": "set BUILD_DEV=1 && set BUILD_PRERELEASE=1 &&  gulp watch",
+    "dev-macos": "export BUILD_DEV=1 && export BUILD_PRERELEASE=1 &&  gulp watch",
+    "pro-windows": "set BUILD_DEV=0 && set BUILD_PRERELEASE=0 &&  gulp watch",
+    "pro-macos": "export BUILD_DEV=0 && export BUILD_PRERELEASE=0 &&  gulp watch",
+    "publish-windows": "set BUILD_DEV=0 && set BUILD_PRERELEASE=0 && webpack --b --progress --config ./webpack.config.product.js --display-modules --display-reasons --display-error-details --colors",
+    "publish-macos": "export BUILD_DEV=0 && export BUILD_PRERELEASE=0 && webpack --b --progress --config ./webpack.config.product.js --display-modules --display-reasons --display-error-details --colors"
+
   },
   "private": true,
   "devDependencies": {
