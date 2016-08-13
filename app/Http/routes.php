@@ -15,15 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/index', function () {
-    return view('index.index');
-});
-
-
-Route::get('/index/index', function () {
-    return view('index.index');
-});
+Route::resource('index','IndexController');
+Route::resource('history','HistoryController');
+Route::resource('detail','DetailController');
+Route::resource('pay','PayController');
+Route::resource('user','UserController');
 
 /*
 |--------------------------------------------------------------------------
