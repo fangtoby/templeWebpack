@@ -2,7 +2,7 @@
 /**
  * author       : dot.f <fangyanliang@yiban.cn>
  * createTime   : 2016/8/10 11:41
- * description  :
+ * description  : 移动用户通话记录抓取
  */
 namespace App\Http\Controllers;
 
@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class HistoryController extends Controller
+class YdController extends Controller
 {
 	//随机生成ip算法
 	public function rand_ip(){
@@ -119,10 +119,13 @@ class HistoryController extends Controller
         return $arr[$id];
     }
 
-
+	public function getMillisecond() {
+		list($t1, $t2) = explode(' ', microtime());
+		return (float)sprintf('%.0f',(floatval($t1)+floatval($t2))*1000);
+	}
     public function index()
     {
-    	$cookie_file = storage_path('cookie') . '/cookie.txt';
+    	$cookie_file = storage_path('cookie') . '/cookie.yd.txt';
 
 		if(!file_exists($cookie_file)){	    //如果文件不存在（默认为当前目录下）
 			$fh = fopen($cookie_file,"w");
@@ -133,6 +136,10 @@ class HistoryController extends Controller
 		$get_url = 'http://service.js.10086.cn/my/actionDispatcher.do';
 
 		$ip = self::rand_ip();
+
+		$userName = xxx;
+		
+		$password = xxx;
 
 		$post = array(
 			"userLoginTransferProtocol"=>"https",
@@ -147,9 +154,9 @@ class HistoryController extends Controller
 			"loginFormTab"=>"http",
 			"loginType"=>"1",
 			"phone-login"=>"on",
-			"mobile"=>"18860975543",
+			"mobile"=> $userName,
 			"city"=>"NJDQ",
-			"password"=>"880920",
+			"password"=> $password,
 			"verifyCode"=>"",
 			);
 

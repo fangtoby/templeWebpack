@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
 Route::resource('index','IndexController');
-Route::resource('history','HistoryController');
-Route::resource('detail','DetailController');
+//移动数据测试
+Route::resource('yd','YdController');
+//联通数据测试
+Route::resource('lt','LtController');
 Route::resource('pay','PayController');
 Route::resource('user','UserController');
 
