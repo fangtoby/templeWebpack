@@ -1,15 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>爬虫</title>
-</head>
-<body>
+@extends('layout.main')
+ 
+@section('header')
+<link rel="stylesheet" type="text/css" href="{{ asset('/static/web/css/main.css') }}">
+@stop
 
+@section('content')	
+<div>
+	<span>{{time()}}</span>
+    <h1>Articles</h1>
+    <hr/>
+ 
+	@foreach($results as $result)
+        <article>
+            <h2>{{ $result->id }}</h2>
+            <div class="body">{{ $result->called }}</div>
+        </article>
+    @endforeach
+</div>
+@stop
+ 
+@section('footer')
 <script type="text/javascript" src="{{ asset('/static/web/js/tools/jquery.js') }}"></script>
 <script type="text/javascript">
 	console.log("success");
 	$.ajax({
-		url: '{{ action('HistoryController@index') }}',
+		url: '{{ action('LtController@index') }}',
+		// url: '{{ action('YdController@index') }}',
 		type:'GET',
 		data:{
 			index:'1'
@@ -20,5 +36,4 @@
 		}
 	})
 </script>
-</body>
-</html>
+@stop
