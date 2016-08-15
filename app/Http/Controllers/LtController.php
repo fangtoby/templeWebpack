@@ -51,17 +51,17 @@ class LtController extends Controller
 	 *	@desc 模拟POST登录，并存储cookie信息
 	*/
 	public function login_post($url, $cookieFile, $post,$headerArr) {
-	    $curl = curl_init();//初始化curl模块
-	    curl_setopt($curl, CURLOPT_URL, $url);//登录提交的地址
-	    curl_setopt($curl, CURLOPT_HEADER, 1);//是否显示头信息
-	    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);//是否自动显示返回的信息
-	    curl_setopt($curl, CURLOPT_COOKIEJAR, $cookieFile); //设置Cookie信息保存在指定的文件中
-	    curl_setopt($curl, CURLOPT_POST, 1);//post方式提交
-	    curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($post));//要提交的信息
-	    curl_setopt($curl, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
-	    $rs = curl_exec($ch); //执行cURL抓取页面内容
-	    curl_close($ch);
-	    return $rs;
+	    	$ch = curl_init();//初始化curl模块
+	    	curl_setopt($ch, CURLOPT_URL, $url);//登录提交的地址
+	    	curl_setopt($ch, CURLOPT_HEADER, 1);//是否显示头信息
+	    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//是否自动显示返回的信息
+	    	curl_setopt($ch, CURLOPT_COOKIEJAR, $cookieFile); //设置Cookie信息保存在指定的文件中
+	    	curl_setopt($ch, CURLOPT_POST, 1);//post方式提交
+	    	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));//要提交的信息
+	    	curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
+	    	$rs = curl_exec($ch); //执行cURL抓取页面内容
+	    	curl_close($ch);
+	    	return $rs;
 	}
 	/**
 	 *
@@ -77,14 +77,14 @@ class LtController extends Controller
 	public function login_get($url,$cookieFile, $get,$headerArr)
 	{
 		$ch = curl_init();//初始化curl模块
-	    curl_setopt($ch, CURLOPT_URL, $url."?".http_build_query($get));//登录提交的地址
-	    curl_setopt($ch, CURLOPT_HEADER, 0);//是否显示头信息
-	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);//是否自动显示返回的信息
-	    curl_setopt($ch, CURLOPT_COOKIEJAR, $cookieFile); //设置Cookie信息保存在指定的文件中
-	    curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
-	    $rs = curl_exec($ch); //执行cURL抓取页面内容
-	    curl_close($ch);
-	    return $rs;
+		curl_setopt($ch, CURLOPT_URL, $url."?".http_build_query($get));//登录提交的地址
+		curl_setopt($ch, CURLOPT_HEADER, 0);//是否显示头信息
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);//是否自动显示返回的信息
+		curl_setopt($ch, CURLOPT_COOKIEJAR, $cookieFile); //设置Cookie信息保存在指定的文件中
+		curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
+		$rs = curl_exec($ch); //执行cURL抓取页面内容
+		curl_close($ch);
+		return $rs;
 	}
 	/**
 	 *	通过login接口的cookie，查询之前请求检查登陆，并从新记录cookie,
@@ -105,14 +105,14 @@ class LtController extends Controller
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	    curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile); //读取cookie
-	    curl_setopt($ch, CURLOPT_COOKIEJAR, $cookieFile); //设置Cookie信息保存在指定的文件中
-	    curl_setopt($ch, CURLOPT_POST, 1);//post方式提交
-	    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));//要提交的信息
-	    curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
-	    $rs = curl_exec($ch); //执行cURL抓取页面内容
-	    curl_close($ch);
-	    return $rs;
+		curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile); //读取cookie
+		curl_setopt($ch, CURLOPT_COOKIEJAR, $cookieFile); //设置Cookie信息保存在指定的文件中
+		curl_setopt($ch, CURLOPT_POST, 1);//post方式提交
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));//要提交的信息
+		curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
+		$rs = curl_exec($ch); //执行cURL抓取页面内容
+		curl_close($ch);
+		return $rs;
 	}
 	/**
 	 *	@desc 根据$cookiePath获取cookie,并根据cookie
@@ -130,13 +130,13 @@ class LtController extends Controller
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	    curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile); //读取cookie
-	    curl_setopt($ch, CURLOPT_POST, 1);//post方式提交
-	    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));//要提交的信息
-	    curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
-	    $rs = curl_exec($ch); //执行cURL抓取页面内容
-	    curl_close($ch);
-	    return $rs;
+	    	curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile); //读取cookie
+	    	curl_setopt($ch, CURLOPT_POST, 1);//post方式提交
+	    	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));//要提交的信息
+	    	curl_setopt($ch, CURLOPT_HTTPHEADER , $headerArr );  //构造IP
+	    	$rs = curl_exec($ch); //执行cURL抓取页面内容
+	    	curl_close($ch);
+	    	return $rs;
 	}
 	/**
 	 *	@desc 拼接Header字符串
@@ -230,7 +230,7 @@ class LtController extends Controller
     {
     	//cookie file path
 
-    	$cookie_file = storage_path('cookie') . '/cookie.lt.txt';
+    		$cookie_file = storage_path('cookie') . '/cookie.lt.txt';
 
     	//如果文件不存在（默认为当前目录下）
 
