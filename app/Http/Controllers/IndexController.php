@@ -6,52 +6,53 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 //载入数据model
-use App\Http\Models\History;
+use App\Http\Models\Articles;
 
 class IndexController extends Controller
 {
     //
-	public function index()
+	public function getIndex()
 	{
-		// $data = History::all();使用model查询数据
-	 	// echo $data;
-	 	// exit;
 
-		// // select * from articles where id = 1;
-		// $article = App\Article::find(1);
-
-		// $article->toArray();
-
-		// // select * from articles where body = 'Lorem ipsum';
-		// //find
-		// $article = App\Article::where('body', 'Lorem ipsum')->get();
-		// //find
-		// $article = App\Article::where('body', 'Lorem ipsum')->first();
-		// //add
-		// $article = App\Article::create(['title' => 'New Article', 'body' => 'New Body', 'published_at' => Carbon\Carbon::now()]);
-
-		$results = History::all();
-
-		return view("index.index",compact("results"));
+		return view("index.index");
 	}
 
-	public function show($id)
+	public function getShow()
 	{
-		$result = History::find($id);
-		if(is_null($result)){
-			abort(404);
-		}
-		// $results = History::findOrFail($id);
-
-		return view("index.detail",compact("result"));
-	}
-
-	public function edit($index)
-	{
-		# code...
 		return view("index.detail");
 	}
-	
+
+	public function getEdit()
+	{
+		# code...
+		return view("index.edit");
+	}
+
+	public function postSave()
+	{
+		# code...
+		$content = $_REQUEST['html'];
+		if($_REQUEST['id']){
+			$model=Articles::find($_REQUEST['id']);
+			$model->content = $content;
+			$bool = $model->save();
+		}else{
+			$model = new Articles();
+			$model->content = $content;
+			$model->status = 0;
+			$bool = $model->save();
+		}
+		echo $bool;
+		// return view("index.index");
+	}
+	public function getContent()
+	{
+		# code...
+		$id = $_REQUEST['id'];
+		$model=Articles::find($id);
+
+		return $model->content;
+	}
 }
 
 
