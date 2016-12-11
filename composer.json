@@ -6,8 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
+<<<<<<< HEAD
         "laravel/framework": "5.2.*",
         "barryvdh/laravel-debugbar": "^2.3"
+=======
+        "laravel/framework": "5.2.*"
+>>>>>>> 33cf02965a22730bcfa36f5ef3404e6f5a67446e
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -49,11 +53,14 @@
     },
     "config": {
         "preferred-install": "dist"
+<<<<<<< HEAD
     },
     "repositories": {
         "packagist": {
             "type": "composer",
             "url": "https://packagist.phpcomposer.com"
         }
+=======
+>>>>>>> 33cf02965a22730bcfa36f5ef3404e6f5a67446e
     }
 }
