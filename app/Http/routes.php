@@ -14,7 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
 /*
 Route::controller('users', 'UserController');
 Would lead you to set up the controller with a sort of RESTful naming scheme:
@@ -73,11 +72,7 @@ Route::resource('monkeys', 'MonkeysController', [
     'except' => ['edit', 'create']
 ]);
 */
-=======
-
-Route::resource('index','IndexController');
 //移动数据测试
->>>>>>> 33cf02965a22730bcfa36f5ef3404e6f5a67446e
 Route::resource('yd','YdController');
 //联通数据测试
 Route::resource('lt','LtController');

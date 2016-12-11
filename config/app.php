@@ -26,11 +26,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'debug' => env('APP_DEBUG', true),
-=======
-    'debug' => env('APP_DEBUG', false),
->>>>>>> 33cf02965a22730bcfa36f5ef3404e6f5a67446e
 
     /*
     |--------------------------------------------------------------------------
@@ -159,13 +155,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-<<<<<<< HEAD
         'Barryvdh\Debugbar\ServiceProvider',
 
-
-=======
->>>>>>> 33cf02965a22730bcfa36f5ef3404e6f5a67446e
     ],
 
     /*
@@ -211,13 +202,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
-<<<<<<< HEAD
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
-
-=======
->>>>>>> 33cf02965a22730bcfa36f5ef3404e6f5a67446e
     ],
 
 ];
